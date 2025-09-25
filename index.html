@@ -222,55 +222,7 @@
           </tbody>
         </table>
 
-        <h2 id="Text-Video-to-Audio">
-          <font color="000093" size="5">Text-Video-to-Audio</font>
-        </h2>
-
-        <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-          <thead>
-            <tr>
-              <td scope="col" width="33%">
-                <font color="061E61" size="4">A man is speaking under the water.</font>
-              </td>
-              <td scope="col" width="33%">
-                <font color="061E61" size="4">Two space shuttles are fighting in the space.</font>
-              </td>
-              <td scope="col" width="33%">
-                <font color="061E61" size="4">The sound of a steam engine.</font>
-              </td>
-            </tr>
-          </thead>
-
-          <table class="table text-center" align="center" style="table-layout: fixed;word-break:break-word">
-            <tbody>
-              <tr>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                    </video>
-                  </div> 
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                    </video>
-                  </div> 
-                </td>
-
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                    </video>
-                  </div> 
-                </td>
-            </tr>
-
-            </tbody>
-          </table>    
-			  </table>
+        
 
         <h2 id="Text-Video-to-Music">
           <font color="000093" size="5">Text-Video-to-Music</font>
@@ -830,9 +782,50 @@
 
         <details>
           <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Click here to see comparison results. </u>
+            <u>Sample1: Click here to see comparison results.</u>
           </summary>
           <br>
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">AudioX (Ours)</font>
+                </th>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">MMAudio</font>
+                </th>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">Diff-Foley</font>
+                </th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                      </video>
+                    </div> 
+                  </td>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                      </video>
+                    </div> 
+                  </td>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                      </video>
+                    </div> 
+                  </td>
+              </tr>
+              </tbody> 
+          </table>          
+
           <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
             <thead>
               <tr>
@@ -852,65 +845,21 @@
                   <td scope="row" width="33%">
                     <div>
                       <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.
                       </video>
                     </div> 
                   </td>
                   <td scope="row" width="33%">
                     <div>
                       <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-
-              </tr>
-
-              </tbody> 
-          </table>          
-
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">MMAudio</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">AudioX (Ours)</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">Ground-Truth</font>
-                </th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio.mp4" type="video/mp4" />Your browser does not support HTML video.
                       </video>
                     </div> 
                   </td>
                   <td scope="row" width="33%">
                     <div>
                       <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.
                       </video>
                     </div> 
                   </td>
@@ -919,6 +868,94 @@
               </tbody> 
           </table>          
         </details>
+
+        <details>
+          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
+            <u>Sample2: Click here to see comparison results.</u>
+          </summary>
+          <br>
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">AudioX (Ours)</font>
+                </th>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">MMAudio</font>
+                </th>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">Diff-Foley</font>
+                </th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                      </video>
+                    </div> 
+                  </td>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_mmaudio_.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                      </video>
+                    </div> 
+                  </td>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_diff-foley.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                      </video>
+                    </div> 
+                  </td>
+              </tr>
+              </tbody> 
+          </table>          
+
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">Seeing&Hearing</font>
+                </th>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">FoleyCrafter </font>
+                </th>
+                <th scope="col" width="16%">
+                  <font color="061E61" size="3">FRIEREN</font>
+                </th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_seeing.mp4" type="video/mp4" />Your browser does not support HTML video.
+                      </video>
+                    </div> 
+                  </td>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_foleycrafter.mp4" type="video/mp4" />Your browser does not support HTML video.
+                      </video>
+                    </div> 
+                  </td>
+                  <td scope="row" width="33%">
+                    <div>
+                      <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_frieren.mp4" type="video/mp4" />Your browser does not support HTML video.
+                      </video>
+                    </div> 
+                  </td>
+              </tr>
+              </tbody> 
+          </table>          
+        </details>        
 
         <h2 id="Video-to-Music">
           <font color="000093" size="5">Video-to-Music</font>
@@ -930,10 +967,53 @@
 
         <details>
           <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Click here to see comparison results. </u>
+            <u>Sample1: click here to see comparison results.</u>
           </summary>
           <br>
 
+          <!-- 第一行：AudioX, VidMuse, MuMu-LLaMA -->
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">AudioX (Ours)</font>
+                </th>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">VidMuse</font>
+                </th>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">MuMu-LLaMA</font>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                    </video>
+                  </div>
+                </td>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_vidmuse.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                    </video>
+                  </div>
+                </td>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_m2ugen.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                    </video>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 第二行：其余方法（保持三列对齐） -->
           <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
             <thead>
               <tr>
@@ -941,165 +1021,133 @@
                   <font color="061E61" size="3">Video2Music</font>
                 </th>
                 <th scope="col" width="33%">
-                  <font color="061E61" size="3">MuMu-LLaMA</font>
+                  <font color="061E61" size="3">CMT</font>
                 </th>
                 <th scope="col" width="33%">
-                  <font color="061E61" size="3">CMT</font>
+                  <font color="061E61" size="3">&nbsp;</font>
                 </th>
               </tr>
             </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
+            <tbody>
+              <tr>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_video2music.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                    </video>
+                  </div>
+                </td>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_cmt.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                    </video>
+                  </div>
+                </td>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="" type="video/mp4" />
+                    </video>
+                  </div>
+                </td>
               </tr>
+            </tbody>
+          </table>
+        </details>
 
-            </tbody> 
-          </table>       
-          
+        <details>
+          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
+            <u>Sample2: click here to see comparison results.</u>
+          </summary>
+          <br>
+
+          <!-- 第一行：AudioX, VidMuse, MuMu-LLaMA -->
           <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
             <thead>
               <tr>
                 <th scope="col" width="33%">
-                  <font color="061E61" size="3">VidMuse</font>
-                </th>
-                <th scope="col" width="33%">
                   <font color="061E61" size="3">AudioX (Ours)</font>
                 </th>
                 <th scope="col" width="33%">
-                  <font color="061E61" size="3">Ground-Truth</font>
+                  <font color="061E61" size="3">VidMuse</font>
+                </th>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">MuMu-LLaMA</font>
                 </th>
               </tr>
             </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-              </tr>
-
-              </tbody> 
-          </table>       
-
-        </details>
-
-        <h2 id="Text-Video-to-Audio">
-          <font color="000093" size="5">Text-Video-to-Audio</font>
-        </h2>
-
-        <!-- <p><b>
-            <font color="061E61" size="4">VGGSound</font>
-        </b></p> -->
-
-        <details>
-          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Click here to see comparison results. </u>
-          </summary>
-          <br>
-            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-              <thead>
-                <tr>
-                  <td scope="col" width="100%">
-                    <font color="061E61" size="4">A man is speaking under the water.</font>
-                  </td>
-                </tr>
-              </thead>
-            </table>
-            
-        <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-          <thead>
-            <tr>
-              <th scope="col" width="25%">
-                <font color="061E61" size="3">FoleyCrafter</font>
-              </th>
-              <th scope="col" width="25%">
-                <font color="061E61" size="3">MMAudio</font>
-              </th>
-              <th scope="col" width="25%">
-                <font color="061E61" size="3">AudioX (Ours)</font>
-              </th>
-              <th scope="col" width="25%">
-                <font color="061E61" size="3">Ground-Truth</font>
-              </th>
-            </tr>
-          </thead>
             <tbody>
               <tr>
-                <td scope="row" width="25%">
+                <td scope="row" width="33%">
                   <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
                     </video>
-                  </div> 
+                  </div>
                 </td>
-                <td scope="row" width="25%">
+                <td scope="row" width="33%">
                   <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_vidmiuse.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
                     </video>
-                  </div> 
+                  </div>
                 </td>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_m2ugen.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
+                    </video>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <td scope="row" width="25%">
+          <!-- 第二行：其余方法（保持三列对齐） -->
+          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+            <thead>
+              <tr>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">Video2Music</font>
+                </th>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">CMT</font>
+                </th>
+                <th scope="col" width="33%">
+                  <font color="061E61" size="3">&nbsp;</font>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" width="33%">
                   <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_video2music.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
                     </video>
-                  </div> 
+                  </div>
                 </td>
-
-                <td scope="row" width="25%">
+                <td scope="row" width="33%">
                   <div>
-                    <video height="180px" controls="controls" style="width: 100%;">
-                    <source src="samples/V2M/-k-DUZivB8c_001.mp4" type="video/mp4" />Your browser does not support HTML video.
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_cmt.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
                     </video>
-                  </div> 
+                  </div>
                 </td>
-            </tr>
+                <td scope="row" width="33%">
+                  <div>
+                    <video height="140px" controls="controls" style="width: 100%;">
+                      <source src="" type="video/mp4" />
+                    </video>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
 
-            </tbody> 
-			  </table>          
-      </details>
+        
 
         </p>
             </div>
