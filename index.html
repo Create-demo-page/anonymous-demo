@@ -242,8 +242,9 @@
               </td>
             </tr>
           </thead>
-
-          <table class="table text-center" align="center" style="table-layout: fixed;word-break:break-word">
+        </table>
+        
+        <table class="table text-center" align="center" style="table-layout: fixed;word-break:break-word">
             <tbody>
               <tr>
                 <td scope="row" width="33%">
@@ -269,11 +270,9 @@
                   </div> 
                 </td>
             </tr>
-
             </tbody>
-          </table>    
-			  </table>
-
+        </table>    
+			
         <h2 id="Audio Inpainting">
           <font color="000093" size="5">Audio Inpainting</font>
         </h2>
@@ -294,21 +293,50 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row"><img src="figures/mel.png" width="90%"></th>
-              <td><img src="figures/mel.png" width="90%"></td>
-              <td><img src="figures/mel.png" width="90%"></td>
+              <th scope="row"><img src="figures/106929_unprocessed.png" width="90%"></th>
+              <td><img src="figures/106929_inpaint.png" width="90%"></td>
+              <td><img src="figures/106929_gt.png" width="90%"></td>
             </tr>
             <tr>
-              <th scope="row"><audio controls="controls">
-                  <source src="samples/T2A/4001570186_Thunder and rain during a sad piano solo.wav" autoplay />Your
+              <td colspan="3" style="text-align:center;color:#061E61;font-size:18px;">
+                <b>Prompt</b>: Brief speech followed by loud applause and cheering
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><audio controls="controls" style="width:90%">
+                  <source src="samples/inpainting/unprocessed/106929.mp3" autoplay />Your
                   browser does not support the audio element.
                 </audio></th>
-              <td><audio controls="controls">
-                  <source src="samples/T2A/4001570186_Thunder and rain during a sad piano solo.wav" autoplay />Your
+              <td><audio controls="controls" style="width:90%">
+                  <source src="samples/inpainting/inpaint/106929.mp3" autoplay />Your
                   browser does not support the audio element.
                 </audio></td>
-              <td><audio controls="controls">
-                  <source src="samples/T2A/4001570186_Thunder and rain during a sad piano solo.wav" autoplay />Your
+              <td><audio controls="controls" style="width:90%">
+                  <source src="samples/inpainting/gt/106929.mp3" autoplay />Your
+                  browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="figures/107166_unprocessed.png" width="90%"></th>
+              <td><img src="figures/107166_inpaint.png" width="90%"></td>
+              <td><img src="figures/107166_gt.png" width="90%"></td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align:center;color:#061E61;font-size:18px;">
+                <b>Prompt</b>: A fire engine horn blows, followed by a fire engine siren blowing
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><audio controls="controls" style="width:90%">
+                  <source src="samples/inpainting/unprocessed/107166.mp3" autoplay />Your
+                  browser does not support the audio element.
+                </audio></th>
+              <td><audio controls="controls" style="width:90%">
+                  <source src="samples/inpainting/inpaint/107166.mp3" autoplay />Your
+                  browser does not support the audio element.
+                </audio></td>
+              <td><audio controls="controls" style="width:90%">
+                  <source src="samples/inpainting/gt/107166.mp3" autoplay />Your
                   browser does not support the audio element.
                 </audio></td>
             </tr>
@@ -323,10 +351,10 @@
         <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
           <thead>
             <tr>
-              <th scope="col" width="50%">
+              <th scope="col" width="50%" style="text-align:center;">
                 <font color="061E61" size="4">To-be-Continued</font>
               </th>
-              <th scope="col" width="50%">
+              <th scope="col" width="50%" style="text-align:center;">
                 <font color="061E61" size="4">Completed</font>
               </th>
 
@@ -334,80 +362,104 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row"><audio controls="controls">
-                  <source src="samples/T2A/4001570186_Thunder and rain during a sad piano solo.wav" autoplay />Your
+              <td colspan="2" style="text-align:center;color:#061E61;font-size:18px;padding:8px 0 12px;">
+                <span style="display:inline-block; max-width:90%;">
+                  <b>Prompt</b>: Action-packed orchestral music with strings, brass, and percussion.
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="text-align:center;">
+                <audio controls="controls" style="width:90%; display:inline-block;">
+                  <source src="samples/music_comp/sample_input.wav" autoplay />Your
                   browser does not support the audio element.
-                </audio></th>
-              <td><audio controls="controls">
-                  <source src="samples/T2A/4001570186_Thunder and rain during a sad piano solo.wav" autoplay />Your
+                </audio>
+              </th>
+              <td style="text-align:center;">
+                <audio controls="controls" style="width:90%; display:inline-block;">
+                  <source src="samples/music_comp/sample_output.wav" autoplay />Your
                   browser does not support the audio element.
-                </audio></td>
+                </audio>
+              </td>
             </tr>
           </tbody>
         </table>
 
+        <!-- Comparison Section START -->
         <h2 id="Comparison">
           <font color="000093" size="6">Comparison</font>
         </h2>
+        
+        <div id="cmp-tabs" style="margin: 10px 0 20px; text-align:center;">
+          <a href="#" data-tab-target="cmp-t2a" class="btn btn-sm btn-outline-primary m-1">Text-to-Audio</a>
+          <a href="#" data-tab-target="cmp-t2m" class="btn btn-sm btn-outline-primary m-1">Text-to-Music</a>
+          <a href="#" data-tab-target="cmp-v2a" class="btn btn-sm btn-outline-primary m-1">Video-to-Audio</a>
+          <a href="#" data-tab-target="cmp-v2m" class="btn btn-sm btn-outline-primary m-1">Video-to-Music</a>
+        </div>
+        
+        <style>
+          .cmp-tab-pane { display: none; }
+          .cmp-tab-pane.cmp-active { display: block; }
+          #cmp-tabs .btn.active { color: #fff; background-color: #007bff; border-color: #007bff; }
+          body { padding-bottom: 80px; }
+          .cmp-tab-pane h2 { font-size: 1.8rem; }
+          .cmp-tab-pane details > summary { font-size: 1.15rem; }
+          .cmp-tab-pane details > summary u b { display: inline; margin-right: 6px; }
+          .cmp-tab-pane details > summary u { text-decoration: none; }
+          .cmp-prompt-row { text-align:left;color:#061E61;font-size:16px;padding:6px 0 10px; }
+          .cmp-toggle {
+            display: inline-block;
+            margin: 2px 0 10px 0;
+            padding: 4px 10px;
+            border: 1px solid #007bff;
+            color: #007bff;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 0.9rem;
+          }
+          .cmp-toggle:hover { background-color: #007bff; color: #fff; }
+          .cmp-group { border-top: 1px solid #e9ecef; padding-top: 12px; margin-top: 16px; }
+          .cmp-group-title { font-size: 1.2rem; font-weight: 700; color: #061E61; margin-bottom: 4px; }
+          .cmp-video { width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+        </style>
+        
+        <div class="cmp-tab-pane cmp-active" id="cmp-t2a">
+          <h2 id="Text-to-Audio-Comparison">
+            <font color="000093" size="5">Text-to-Audio</font>
+          </h2>
 
-        <h2 id="Text-to-Audio">
-          <font color="000093" size="5">Text-to-Audio</font>
-        </h2>
-
-            <!-- <p><b>
-                <font color="061E61" size="4">AudioCaps</font>
-            </b></p> -->
-
-            <details>
-              <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-                <u><b>Simple Instruction</b>: A clock ticking. </u>
-              </summary>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Simple Instruction</div>
+            <div class="cmp-prompt-row"><span><b>Prompt</b>: A clock ticking.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
-
-              <!-- First Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioGen</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-L-Full</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-2-Large</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Tango 2</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audiogen.mp3">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audiox.mp3">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audioldm.mp3">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audioldm2.mp3">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/tango2.mp3">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
-
-              <!-- Second Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Stable Audio Open</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Make-an-Audio-2</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">MMAudio</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioX (Ours)</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -415,68 +467,44 @@
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/stableaudio.mp3">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/mmaudio.mp3">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audiox.mp3">Your browser does not support the audio element.</audio></td>
-
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audiogen.mp3">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
+            </details>
+          </div>
 
-            </details>            
-
-            <!-- <p><b>
-                <font color="061E61" size="4">AudioX-Bench</font>
-            </b></p> -->
-
-            <details>
-              <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-                <u><b>Instruction with Ordering</b>: The pop of a toaster, the scrape of a knife, and then the crunch of someone biting into toast. </u>
-              </summary>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Instruction with Ordering</div>
+            <div class="cmp-prompt-row"><span><b>Prompt</b>: The pop of a toaster, the scrape of a knife, and then the crunch of someone biting into toast.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
-
-              <!-- First Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioGen</font>
-                    </th>                    
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-L-Full</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-2-Large</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Tango 2</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audiox.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audioldm.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audioldm2.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/tango2.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
-
-              <!-- Second Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Stable Audio Open</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Make-an-Audio-2</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">MMAudio</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioX (Ours)</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -484,63 +512,44 @@
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/stableaudio.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audiox.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audiogen.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
+            </details>
+          </div>
 
-            </details>      
-
-            <details>
-              <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-                <u><b>Instruction with Category</b>: A soundscape of a factory assembly line, with the whirring of conveyor belts, the hiss of pneumatic tools, a warning buzzer sounding, and metal parts clanking together. </u>
-              </summary>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Instruction with Category</div>
+            <div class="cmp-prompt-row"><span><b>Prompt</b>: A soundscape of a factory assembly line, with the whirring of conveyor belts, the hiss of pneumatic tools, a warning buzzer sounding, and metal parts clanking together.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
-
-              <!-- First Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioGen</font>
-                    </th>                    
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-L-Full</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-2-Large</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Tango 2</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audiox.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audioldm.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audioldm2.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/tango2.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
-
-              <!-- Second Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Stable Audio Open</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Make-an-Audio-2</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">MMAudio</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioX (Ours)</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -548,131 +557,89 @@
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/stableaudio.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audiox.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audiogen.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
+            </details>
+          </div>
 
-            </details>      
-
-
-            <!-- <p><b>
-                <font color="061E61" size="4">AudioTime</font>
-            </b></p> -->
-
-            <details>
-              <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-                <u><b>Instruction with Event Count</b>: The musician strums the guitar chord three times to kick off the song.</u>
-              </summary>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Instruction with Event Count</div>
+            <div class="cmp-prompt-row"><span><b>Prompt</b>: The musician strums the guitar chord three times to kick off the song.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
-
-              <!-- First Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioGen</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-L-Full</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-2-Large</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Tango 2</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audiox.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audioldm.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audioldm2.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/tango2.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
-
-              <!-- Second Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Stable Audio Open</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Make-an-Audio-2</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">MMAudio</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioX (Ours)</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/stableaudio.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audiox.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audiogen.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
+            </details>
+          </div>
 
-            </details>      
-
-            <details>
-              <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-                <u><b>Instruction with Timestamp</b>: The distinct sound of a basketball being dribbled on a court is present between 1.0 and 8.0 seconds.</u>
-              </summary>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Instruction with Timestamp</div>
+            <div class="cmp-prompt-row"><span><b>Prompt</b>: The distinct sound of a basketball being dribbled on a court is present between 1.0 and 8.0 seconds.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
-
-              <!-- First Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioGen</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-L-Full</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioLDM-2-Large</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Tango 2</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audiox.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audioldm.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audioldm2.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/tango2.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
-
-              <!-- Second Row -->
               <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
                 <thead>
                   <tr>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Stable Audio Open</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">Make-an-Audio-2</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">MMAudio</font>
-                    </th>
-                    <th width="25%" style="color:#061E61;" size="3">
-                      <font color="061E61" size="3">AudioX (Ours)</font>
-                    </th>
+                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -680,478 +647,235 @@
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/stableaudio.wav">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/">Your browser does not support the audio element.</audio></td>
                     <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audiox.wav">Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audiogen.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
-
-            </details>      
-
-        <h2 id="Text-to-Music">
-          <font color="000093" size="5">Text-to-Music</font>
-        </h2>
-            <!-- <p><b>
-                <font color="061E61" size="4">MusicCaps</font>
-            </b></p> -->
-
-            <details>
-              <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-                <u>This is an orchestra playing Arabic music. The melody is played by the conjunction of multiple instruments such as violin, flute and qanun while tambourines create the percussive background of the piece. It has an oriental atmosphere that could be very fitting in a movie or a show taking place in the Middle East. It could also be a good background music for Arab cuisine restaurants. </u>
-              </summary>
-              <br>
-
-                <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-                  <thead>
-                    <tr>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">MusicGen</font>
-                      </th>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">AudioLDM-L-Full</font>
-                      </th>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">AudioLDM-2-Large</font>
-                      </th>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">TangoMusic</font>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row"><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/musicgen.mp3" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></th>
-                      <td><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/audioldm.mp3" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></td>
-                      <td><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/audioldm2.mp3" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></td>
-                      <td><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-                  <thead>
-                    <tr>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">Stable Audio Open</font>
-                      </th>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">MAGNET-large</font>
-                      </th>
-                      <th scope="col" width="25%">
-                        <font color="061E61" size="3">AudioX (Ours)</font>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row"><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/stableaudio.mp3" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></th>
-                      <td><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/magnet.mp3" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></td>
-                      <td><audio controls style="width:80%;">
-                          <source src="samples/comparison/T2M/MusicCaps/audiox.mp3" autoplay />Your
-                          browser does not support the audio element.
-                        </audio></td>
-                    </tr>
-                  </tbody>
-                </table> 
             </details>
+          </div>
+        </div>
 
-        <h2 id="Video-to-Audio">
-          <font color="000093" size="5">Video-to-Audio</font>
-        </h2>
-
-            <!-- <p><b>
-                <font color="061E61" size="4">VGGSound</font>
-            </b></p> -->
-
-        <details>
-          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Sample1: Click here to see comparison results.</u>
-          </summary>
-          <br>
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">AudioX (Ours)</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">MMAudio</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">Diff-Foley</font>
-                </th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                      </video>
-                    </div> 
-                  </td>
-              </tr>
-              </tbody> 
-          </table>          
-
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">Seeing&Hearing</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">FoleyCrafter </font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">FRIEREN</font>
-                </th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-              </tr>
-
-              </tbody> 
-          </table>          
-        </details>
-
-        <details>
-          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Sample2: Click here to see comparison results.</u>
-          </summary>
-          <br>
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">AudioX (Ours)</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">MMAudio</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">Diff-Foley</font>
-                </th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_mmaudio_.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_diff-foley.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                      </video>
-                    </div> 
-                  </td>
-              </tr>
-              </tbody> 
-          </table>          
-
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">Seeing&Hearing</font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">FoleyCrafter </font>
-                </th>
-                <th scope="col" width="16%">
-                  <font color="061E61" size="3">FRIEREN</font>
-                </th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_seeing.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_foleycrafter.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-                  <td scope="row" width="33%">
-                    <div>
-                      <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_frieren.mp4" type="video/mp4" />Your browser does not support HTML video.
-                      </video>
-                    </div> 
-                  </td>
-              </tr>
-              </tbody> 
-          </table>          
-        </details>        
-
-        <h2 id="Video-to-Music">
-          <font color="000093" size="5">Video-to-Music</font>
-        </h2>
-
-        <!-- <p><b>
-            <font color="061E61" size="4">V2M-Bench</font>
-        </b></p> -->
-
-        <details>
-          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Sample1: click here to see comparison results.</u>
-          </summary>
-          <br>
-
-          <!-- 第一行：AudioX, VidMuse, MuMu-LLaMA -->
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">AudioX (Ours)</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">VidMuse</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">MuMu-LLaMA</font>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_vidmuse.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_m2ugen.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <!-- 第二行：其余方法（保持三列对齐） -->
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">Video2Music</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">CMT</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">&nbsp;</font>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_video2music.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample1/-k-DUZivB8c_cmt.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="" type="video/mp4" />
-                    </video>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </details>
-
-        <details>
-          <summary style="font-size: 16px; color: #061E61; cursor: pointer;">
-            <u>Sample2: click here to see comparison results.</u>
-          </summary>
-          <br>
-
-          <!-- 第一行：AudioX, VidMuse, MuMu-LLaMA -->
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">AudioX (Ours)</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">VidMuse</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">MuMu-LLaMA</font>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_audiox.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_vidmiuse.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_m2ugen.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <!-- 第二行：其余方法（保持三列对齐） -->
-          <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-            <thead>
-              <tr>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">Video2Music</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">CMT</font>
-                </th>
-                <th scope="col" width="33%">
-                  <font color="061E61" size="3">&nbsp;</font>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_video2music.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="samples/comparison/V2M/sample2/e61osylSXV4_cmt.mp4" type="video/mp4" />您的浏览器不支持HTML视频。
-                    </video>
-                  </div>
-                </td>
-                <td scope="row" width="33%">
-                  <div>
-                    <video height="140px" controls="controls" style="width: 100%;">
-                      <source src="" type="video/mp4" />
-                    </video>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </details>
-
-        
-
-        </p>
+        <div class="cmp-tab-pane" id="cmp-t2m">
+          <h2 id="Text-to-Music-Comparison">
+            <font color="000093" size="5">Text-to-Music</font>
+          </h2>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">MusicCaps</div>
+            <div class="cmp-prompt-row">
+              <span><b>Prompt</b>: This is an orchestra playing Arabic music. The melody is played by the conjunction of multiple instruments such as violin, flute and qanun while tambourines create the percussive background of the piece. It has an oriental atmosphere that could be very fitting in a movie or a show taking place in the Middle East. It could also be a good background music for Arab cuisine restaurants.</span>
             </div>
-          </section>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">View comparison</span></summary>
+              <br>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th scope="col" width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th scope="col" width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th scope="col" width="25%"><font color="061E61" size="3">TangoMusic</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/audiox.mp3" autoplay />Your browser does not support the audio element.</audio></th>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/audioldm.mp3" autoplay />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/audioldm2.mp3" autoplay />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/" autoplay />Your browser does not support the audio element.</audio></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th scope="col" width="25%"><font color="061E61" size="3">MAGNET-large</font></th>
+                    <th scope="col" width="25%"><font color="061E61" size="3">MusicGen</font></th>
+                    <th scope="col" width="25%"><font color="061E61" size="3">&nbsp;</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/stableaudio.mp3" autoplay />Your browser does not support the audio element.</audio></th>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/magnet.mp3" autoplay />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/MusicCaps/musicgen.mp3" autoplay />Your browser does not support the audio element.</audio></td>
+                    <td><div style="height: 40px;"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+        </div>
+
+        <div class="cmp-tab-pane" id="cmp-v2a">
+          <h2 id="Video-to-Audio-Comparison">
+            <font color="000093" size="5">Video-to-Audio</font>
+          </h2>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Sample1</div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">View comparison</span></summary>
+              <br>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">Diff-Foley</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">Seeing&Hearing</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">FoleyCrafter</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">FRIEREN</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Sample2</div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">View comparison</span></summary>
+              <br>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">Diff-Foley</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_mmaudio_.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">Seeing&Hearing</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">FoleyCrafter</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">FRIEREN</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_seeing.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_foleycrafter.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_frieren.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+        </div>
+
+        <div class="cmp-tab-pane" id="cmp-v2m">
+          <h2 id="Video-to-Music-Comparison">
+            <font color="000093" size="5">Video-to-Music</font>
+          </h2>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Sample1</div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">View comparison</span></summary>
+              <br>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">VidMuse</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">MuMu-LLaMA</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_vidmuse.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_m2ugen.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">Video2Music</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">CMT</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">&nbsp;</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_video2music.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_cmt.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><div style="height: 140px;"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+          <div class="cmp-group" style="margin-bottom: 10px;">
+            <div class="cmp-group-title">Sample2</div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">View comparison</span></summary>
+              <br>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">VidMuse</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">MuMu-LLaMA</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample2/e61osylSXV4_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample2/e61osylSXV4_vidmiuse.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample2/e61osylSXV4_m2ugen.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+                <thead>
+                  <tr>
+                    <th scope="col" width="33%"><font color="061E61" size="3">Video2Music</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">CMT</font></th>
+                    <th scope="col" width="33%"><font color="061E61" size="3">&nbsp;</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample2/e61osylSXV4_video2music.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample2/e61osylSXV4_cmt.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><div style="height: 140px;"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+        </div>
+        <!-- Comparison Section END -->
+
         </article>
       </main>
 
@@ -1171,7 +895,37 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    <script>
+      // Lightweight tabs for Comparison section
+      (function(){
+        function activateTab(targetId){
+          var panes = document.querySelectorAll('.cmp-tab-pane');
+          panes.forEach(function(p){
+            p.classList.remove('cmp-active');
+          });
+          var target = document.getElementById(targetId);
+          if(target){
+            target.classList.add('cmp-active');
+          }
 
+          var buttons = document.querySelectorAll('#cmp-tabs .btn');
+          buttons.forEach(function(b){ b.classList.remove('active'); });
+          var activeBtn = document.querySelector('#cmp-tabs .btn[data-tab-target="'+targetId+'"]');
+          if(activeBtn){ activeBtn.classList.add('active'); }
+        }
+
+        document.addEventListener('click', function(e){
+          var t = e.target.closest('[data-tab-target]');
+          if(t){
+            e.preventDefault();
+            activateTab(t.getAttribute('data-tab-target'));
+          }
+        });
+
+        // set default active (first tab)
+        activateTab('cmp-t2a');
+      })();
+    </script>
 
     <script type="text/x-mathjax-config">
      MathJax.Hub.Config({
@@ -1191,7 +945,7 @@
          "HTML-CSS": { availableFonts: ["TeX"],
                        linebreaks: { automatic: true } }
      });
- </script>
+    </script>
 
     <script type="text/x-mathjax-config">
      MathJax.Hub.Config({
@@ -1199,14 +953,11 @@
          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
        }
      });
- </script>
+    </script>
 
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
       </script>
-
-
-
 
 </body>
 
