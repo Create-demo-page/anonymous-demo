@@ -33,6 +33,32 @@
             </font>
           </h1>
 
+          <!-- Navigation Menu -->
+          <div style="text-align: center; margin: 20px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 20px; color: #000093;">Quick Navigation</h3>
+            
+            <!-- Samples Section -->
+            <div style="margin-bottom: 20px;">
+              <h4 style="margin-bottom: 10px; color: #495057; font-size: 16px; font-weight: 600;">Samples</h4>
+              <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+                <a href="#Text-to-Audio" style="display: inline-block; padding: 6px 12px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; font-size: 13px;">Text-to-Audio</a>
+                <a href="#Text-to-Music" style="display: inline-block; padding: 6px 12px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; font-size: 13px;">Text-to-Music</a>
+                <a href="#Video-to-Audio" style="display: inline-block; padding: 6px 12px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; font-size: 13px;">Video-to-Audio</a>
+                <a href="#Video-to-Music" style="display: inline-block; padding: 6px 12px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; font-size: 13px;">Video-to-Music</a>
+                <a href="#Audio Inpainting" style="display: inline-block; padding: 6px 12px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; font-size: 13px;">Audio Inpainting</a>
+                <a href="#Music Completion" style="display: inline-block; padding: 6px 12px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; font-size: 13px;">Music Completion</a>
+              </div>
+            </div>
+            
+            <!-- Comparison Samples Section -->
+            <div>
+              <h4 style="margin-bottom: 10px; color: #495057; font-size: 16px; font-weight: 600;">Comparison Samples</h4>
+              <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+                <a href="#Comparison" style="display: inline-block; padding: 8px 16px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: bold;">Comparison</a>
+              </div>
+            </div>
+          </div>
+
             <h2 id="Text-to-Audio">
               <font color="000093" size="5">Text-to-Audio</font>
             </h2>
@@ -429,9 +455,12 @@
             <font color="000093" size="5">Text-to-Audio</font>
           </h2>
 
+          <!-- AudioCaps Benchmark -->
+          <div class="cmp-group" style="margin-bottom: 20px;">
+            <div class="cmp-group-title">AudioCaps Benchmark</div>
+            
           <div class="cmp-group" style="margin-bottom: 10px;">
-            <div class="cmp-group-title">Simple Instruction</div>
-            <div class="cmp-prompt-row"><span><b>Prompt</b>: A clock ticking.</span></div>
+              <div class="cmp-prompt-row"><span><b>Sample 1</b>: A clock ticking.</span></div>
             <details class="cmp-sample-accordion">
               <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
@@ -446,10 +475,147 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audiox.mp3">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audioldm.mp3">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audioldm2.mp3">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/tango2.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/audiox.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/audioldm.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/audioldm2.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/tango2.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">MAGNET</font></th>
+                      <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/stableaudio.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/margnet.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/mmaudio.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample1/audiogen.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 2</b>: Footsteps followed by rapid gunshots and people speaking.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/audiox-103295.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/audioldm-103295.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/audioldm2-103295.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/tango-2-103295.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">MAGNET</font></th>
+                      <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/stable-audio-open-103295.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/magnet-103295.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/mmaudio-103295.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample2/audiogen-103295.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 3</b>: A person whistling while drums play.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/audiox-104582.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/audioldm-104582.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/audioldm2-104582.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/tango-2-104582.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">MAGNET</font></th>
+                      <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/stable-audio-open-104582.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/magnet-104582.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/mmaudio-104582.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AudioCaps/sample3/audiogen-104582.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+          </div>
+
+          <!-- T2A-bench Benchmark -->
+          <div class="cmp-group" style="margin-bottom: 20px;">
+            <div class="cmp-group-title">T2A-bench Benchmark</div>
+            
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 1 (Category)</b>: A street musician is playing, with the sound of an acoustic guitar and coins being tossed into a case.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/audiox-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/audioldm-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/audioldm2-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/tango-2-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -464,10 +630,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/stableaudio.mp3">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/mmaudio.mp3">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/AudioCaps/audiogen.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/stable-audio-open-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/mka2-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/mmaudio-T2A_01591.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample1/audiogen-T2A_01591.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -475,8 +641,51 @@
           </div>
 
           <div class="cmp-group" style="margin-bottom: 10px;">
-            <div class="cmp-group-title">Instruction with Ordering</div>
-            <div class="cmp-prompt-row"><span><b>Prompt</b>: The pop of a toaster, the scrape of a knife, and then the crunch of someone biting into toast.</span></div>
+              <div class="cmp-prompt-row"><span><b>Sample 2 (Count)</b>: A series of four deep, resonant bell tolls comes from the old church tower.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+              <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/audiox-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/audioldm-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/audioldm2-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/tango-2-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                      <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/stable-audio-open-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/mka2-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/mmaudio-T2A_00301.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample2/audiogen-T2A_00301.wav">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </details>
+          </div>
+
+          <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 3 (Ordering)</b>: The sound of a person typing on a laptop, the fan kicking in, and then the person sighing.</span></div>
             <details class="cmp-sample-accordion">
               <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
@@ -491,10 +700,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audiox.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audioldm.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audioldm2.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/tango2.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/audiox-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/audioldm-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/audioldm2-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/tango-2-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -509,10 +718,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/stableaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/ordering/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/stable-audio-open-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/mka2-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/mmaudio-T2A_00984.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample3/audiogen-T2A_00984.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -520,8 +729,7 @@
           </div>
 
           <div class="cmp-group" style="margin-bottom: 10px;">
-            <div class="cmp-group-title">Instruction with Category</div>
-            <div class="cmp-prompt-row"><span><b>Prompt</b>: A soundscape of a factory assembly line, with the whirring of conveyor belts, the hiss of pneumatic tools, a warning buzzer sounding, and metal parts clanking together.</span></div>
+              <div class="cmp-prompt-row"><span><b>Sample 4 (Timestamp)</b>: A piece of paper is crumpled into a ball between 1.0 and 2.5 seconds.</span></div>
             <details class="cmp-sample-accordion">
               <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
@@ -536,10 +744,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audiox.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audioldm.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audioldm2.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/tango2.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/audiox-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/audioldm-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/audioldm2-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/tango-2-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -554,10 +762,60 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/stableaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/category/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/stable-audio-open-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/mka2-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/mmaudio-T2A_01243.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/T2A-bench/sample4/audiogen-T2A_01243.wav">Your browser does not support the audio element.</audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+            </div>
+          </div>
+
+          <!-- AudioTime Benchmark -->
+          <div class="cmp-group" style="margin-bottom: 20px;">
+            <div class="cmp-group-title">AudioTime Benchmark</div>
+
+          <div class="cmp-group" style="margin-bottom: 10px;">
+              <!-- <div class="cmp-group-title" style="font-size: 1.1rem;">Duration</div> -->
+              <div class="cmp-prompt-row"><span><b>Sample 1 (Duration)</b>: A foghorn sounded for 3.71 seconds.</span></div>
+            <details class="cmp-sample-accordion">
+              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+              <br>
+              <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                <thead>
+                  <tr>
+                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/audiox-sync_184.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/audioldm-syn_184.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/audioldm2-syn_184.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/tango2-syn_184.wav">Your browser does not support the audio element.</audio></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                <thead>
+                  <tr>
+                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/stable-audio-open-syn_184.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/mka2-syn_184.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/mmaudio-syn_184.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/duration/sample1/audiogen-syn_184.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -565,8 +823,8 @@
           </div>
 
           <div class="cmp-group" style="margin-bottom: 10px;">
-            <div class="cmp-group-title">Instruction with Event Count</div>
-            <div class="cmp-prompt-row"><span><b>Prompt</b>: The musician strums the guitar chord three times to kick off the song.</span></div>
+              <!-- <div class="cmp-group-title" style="font-size: 1.1rem;">Frequency</div> -->
+              <div class="cmp-prompt-row"><span><b>Sample 2 (Frequency)</b>: A horse neighs or whinnies three times.</span></div>
             <details class="cmp-sample-accordion">
               <summary><span class="cmp-toggle">Click to view comparison</span></summary>
               <br>
@@ -581,10 +839,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audiox.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audioldm.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audioldm2.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/tango2.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/audiox-sync_459.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/audioldm-syn_459.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/audioldm2-syn_459.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/tango2-syn_459.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -599,68 +857,118 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/stableaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/count/audiogen.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/stable-audio-open-syn_459.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/mka2-syn_459.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/mmaudio-syn_459.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/frequency/sample1/audiogen-syn_459.wav">Your browser does not support the audio element.</audio></td>
                   </tr>
                 </tbody>
               </table>
             </details>
           </div>
 
-          <div class="cmp-group" style="margin-bottom: 10px;">
-            <div class="cmp-group-title">Instruction with Timestamp</div>
-            <div class="cmp-prompt-row"><span><b>Prompt</b>: The distinct sound of a basketball being dribbled on a court is present between 1.0 and 8.0 seconds.</span></div>
-            <details class="cmp-sample-accordion">
-              <summary><span class="cmp-toggle">Click to view comparison</span></summary>
-              <br>
-              <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
-                <thead>
-                  <tr>
-                    <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
-                    <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
-                    <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
-                    <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audiox.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audioldm.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audioldm2.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/tango2.wav">Your browser does not support the audio element.</audio></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
-                <thead>
-                  <tr>
-                    <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
-                    <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
-                    <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
-                    <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/stableaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/mmaudio.wav">Your browser does not support the audio element.</audio></td>
-                    <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/timestamp/audiogen.wav">Your browser does not support the audio element.</audio></td>
-                  </tr>
-                </tbody>
-              </table>
-            </details>
-          </div>
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <!-- <div class="cmp-group-title" style="font-size: 1.1rem;">Ordering</div> -->
+              <div class="cmp-prompt-row"><span><b>Sample 3 (Ordering)</b>: First, a cricket chirps briefly, then later, a mosquito buzzes continuously.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/audiox-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/audioldm-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/audioldm2-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/tango2-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                      <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/stable-audio-open-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/mka2-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/mmaudio-syn_159.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/ordering/sample1/audiogen-syn_159.wav">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
         </div>
+
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-group-title" style="font-size: 1.1rem;">Timestamp</div>
+              <div class="cmp-prompt-row"><span><b>Sample 4 (Timestamp)</b>: A toilet flush occurs from 1.616 to 4.458 seconds, followed by a rumble between 6.044 and 10 seconds.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">Tango 2</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/audiox-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/audioldm-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/audioldm2-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/tango2-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">Make-an-Audio-2</font></th>
+                      <th width="25%"><font color="061E61" size="3">MMAudio</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioGen</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/stable-audio-open-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/mka2-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/mmaudio-syn_157.flac">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2A/compare/AutioTime/timestamp/sample1/audiogen-syn_157.wav">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+          </div>
+
+        </div>
+
 
         <div class="cmp-tab-pane" id="cmp-t2m">
           <h2 id="Text-to-Music-Comparison">
             <font color="000093" size="5">Text-to-Music</font>
           </h2>
-          <div class="cmp-group" style="margin-bottom: 10px;">
-            <div class="cmp-group-title">MusicCaps</div>
+          
+          <!-- MusicCaps Benchmark -->
+          <div class="cmp-group" style="margin-bottom: 20px;">
+            <div class="cmp-group-title">MusicCaps Benchmark</div>
             <div class="cmp-prompt-row">
               <span><b>Prompt</b>: This is an orchestra playing Arabic music. The melody is played by the conjunction of multiple instruments such as violin, flute and qanun while tambourines create the percussive background of the piece. It has an oriental atmosphere that could be very fitting in a movie or a show taking place in the Middle East. It could also be a good background music for Arab cuisine restaurants.</span>
             </div>
@@ -704,6 +1012,143 @@
                 </tbody>
               </table>
             </details>
+          </div>
+
+          <!-- V2M-bench Benchmark -->
+          <div class="cmp-group" style="margin-bottom: 20px;">
+            <div class="cmp-group-title">V2M-bench Benchmark</div>
+            
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 1</b>: Instrumental jazz piece with piano, guitar, drums, and bass.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">TangoMusic</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/audiox-ia32ReZf0SA_0020_0030.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/audioldm-ia32ReZf0SA_0020_0030.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/audioldm2-ia32ReZf0SA_0020_0030.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/tango-music-ia32ReZf0SA_0020_0030.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">MAGNET-large</font></th>
+                      <th width="25%"><font color="061E61" size="3">MusicGen</font></th>
+                      <th width="25%"><font color="061E61" size="3">&nbsp;</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/stable-audio-open-ia32ReZf0SA_0020_0030.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/magnet-ia32ReZf0SA_0020_0030.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample2_jazz/musicgen-ia32ReZf0SA_0020_0030.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><div style="height: 40px;"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 2</b>: Instrumental folk song with acoustic guitar, violin, accordion, groovy bass line, and fast tempo percussion.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">TangoMusic</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/audiox-YHZ6VEsErV4_0080_0090.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/audioldm-YHZ6VEsErV4_0080_0090.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/audioldm2-YHZ6VEsErV4_0080_0090.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/tango-music-YHZ6VEsErV4_0080_0090.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">MAGNET-large</font></th>
+                      <th width="25%"><font color="061E61" size="3">MusicGen</font></th>
+                      <th width="25%"><font color="061E61" size="3">&nbsp;</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/stable-audio-open-YHZ6VEsErV4_0080_0090.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/magnet-YHZ6VEsErV4_0080_0090.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample3_folk/musicgen-YHZ6VEsErV4_0080_0090.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><div style="height: 40px;"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+
+            <div class="cmp-group" style="margin-bottom: 10px;">
+              <div class="cmp-prompt-row"><span><b>Sample 3</b>: Punk rock track with electric guitar, bass, drums, aggressive and melodic.</span></div>
+              <details class="cmp-sample-accordion">
+                <summary><span class="cmp-toggle">Click to view comparison</span></summary>
+                <br>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">AudioX (Ours)</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-L-Full</font></th>
+                      <th width="25%"><font color="061E61" size="3">AudioLDM-2-Large</font></th>
+                      <th width="25%"><font color="061E61" size="3">TangoMusic</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/audiox_wmQ8Xgx1Fmo_0000_0010.wav">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/audioldm_wmQ8Xgx1Fmo_0000_0010.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/audioldm2_wmQ8Xgx1Fmo_0000_0010.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/tangomusic_wmQ8Xgx1Fmo_0000_0010.mp3">Your browser does not support the audio element.</audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table" align="center" style="table-layout: fixed; word-break: break-word;">
+                  <thead>
+                    <tr>
+                      <th width="25%"><font color="061E61" size="3">Stable Audio Open</font></th>
+                      <th width="25%"><font color="061E61" size="3">MAGNET-large</font></th>
+                      <th width="25%"><font color="061E61" size="3">MusicGen</font></th>
+                      <th width="25%"><font color="061E61" size="3">&nbsp;</font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/stable-audio-ppen_wmQ8Xgx1Fmo_0000_0010.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/MAGNET_wmQ8Xgx1Fmo_0000_0010.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><audio controls style="width:80%;"><source src="samples/comparison/T2M/v2m-bench/sample1/musicgen_wmQ8Xgx1Fmo_0000_0010.mp3">Your browser does not support the audio element.</audio></td>
+                      <td><div style="height: 40px;"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
           </div>
         </div>
 
