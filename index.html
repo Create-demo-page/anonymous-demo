@@ -15,9 +15,73 @@
   <link rel="alternate" href="index.xml" type="application/rss+xml" title="Speech Research">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   <title>AudioX: A Unified Framework for Anything-to-Audio Generation</title>
+  <style>
+    /* === START: STYLES FOR LOADING OVERLAY === */
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #000093;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1.5s linear infinite;
+      margin-bottom: 20px;
+    }
+    #loading-overlay p { font-size: 18px; color: #000093; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    /* === END: STYLES FOR LOADING OVERLAY === */
+    /* === START: Progress bar styles === */
+    #loading-progress {
+      position: relative;
+      width: 320px;
+      max-width: 80vw;
+      height: 10px;
+      border-radius: 6px;
+      background: #e9ecef;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+    #loading-progress .bar {
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #00bcd4);
+      transition: width 0.2s ease;
+      width: 0%;
+    }
+    #loading-progress .label {
+      position: absolute;
+      top: -22px;
+      right: 0;
+      font-size: 13px;
+      color: #061E61;
+    }
+    /* === END: Progress bar styles === */
+  </style>
 </head>
 
 <body rightmargin="150" leftmargin="150" topmargin="100" bottommargin="100" line-height:160%>
+  <!-- === START: LOADING OVERLAY === -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+    <p><strong>Loading samples…</strong><br> Please do not refresh the page. Thanks for your patience!</p>
+    <div id="loading-progress" aria-label="Loading progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="bar"></div>
+      <span class="label">0%</span>
+    </div>
+  </div>
+  <!-- === END: LOADING OVERLAY === -->
   <font size="5">
 
     <div class="container">
@@ -236,7 +300,7 @@
               <td scope="row" width="33%">
                 <div>
                   <video height="180px" controls="controls" preload="none" poster="samples/V2A/Do5DfkHBhtg_000400_poster.jpg" style="width: 100%;">
-                  <source src="samples/V2A/Do5DfkHBhtg_000400.mp4" type="video/mp4" />Your browser does not support HTML video.
+                  <source src="samples/V2A/Do5DfkHBhtg_000400_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.
                   </video>
                 </div> 
               </td>
@@ -252,14 +316,14 @@
               <td scope="row" width="33%">
                 <div>
                   <video height="180px" controls="controls" preload="none" poster="samples/V2A/V1M3HiUz0ZQ_000070_poster.jpg" style="width: 100%;">
-                  <source src="samples/V2A/V1M3HiUz0ZQ_000070.mp4" type="video/mp4" />Your browser does not support HTML video.
+                  <source src="samples/V2A/V1M3HiUz0ZQ_000070_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.
                   </video>
                 </div> 
               </td>
               <td scope="row" width="33%">
                 <div>
                   <video height="180px" controls="controls" preload="none" poster="samples/V2A/JIemsK_0lXc_000364_poster.jpg" style="width: 100%;">
-                  <source src="samples/V2A/JIemsK_0lXc_000364.mp4" type="video/mp4" />Your browser does not support HTML video.
+                  <source src="samples/V2A/JIemsK_0lXc_000364_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.
                   </video>
                 </div> 
               </td>
@@ -299,7 +363,7 @@
               <td scope="row" width="33%">
                 <div>
                   <video height="180px" controls="controls" preload="none" poster="samples/V2M/V2M_sample-2_poster.jpg" style="width: 100%;">
-                  <source src="samples/V2M/V2M_sample-2.mp4" type="video/mp4" />Your browser does not support HTML video.
+                  <source src="samples/V2M/V2M_sample-2_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.
                   </video>
                 </div> 
               </td>
@@ -379,9 +443,9 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row"><img src="figures/106929_unprocessed.png" width="90%"></th>
-              <td><img src="figures/106929_inpaint.png" width="90%"></td>
-              <td><img src="figures/106929_gt.png" width="90%"></td>
+              <th scope="row"><img src="figures/106929_unprocessed.jpeg" width="90%"></th>
+              <td><img src="figures/106929_inpaint.jpeg" width="90%"></td>
+              <td><img src="figures/106929_gt.jpeg" width="90%"></td>
             </tr>
             <tr>
               <td colspan="3" style="text-align:center;color:#061E61;font-size:18px;">
@@ -1231,9 +1295,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_audiox_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                     <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_mmaudio___compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_diff-foley_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                   </tr>
                 </tbody>
               </table>
@@ -1247,9 +1311,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_seeing.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_foleycrafter.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_frieren.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_seeing_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_foleycrafter_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample1/5tVUZcDC_Ss_000122_frieren_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                   </tr>
                 </tbody>
               </table>
@@ -1270,9 +1334,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_mmaudio_.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_diff-foley.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_audiox_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_mmaudio__compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_diff-foley_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                   </tr>
                 </tbody>
               </table>
@@ -1286,9 +1350,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_seeing.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_foleycrafter.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_frieren.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_seeing_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_foleycrafter_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2A/sample2/EYWZz8l8yKg_000110_frieren_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                   </tr>
                 </tbody>
               </table>
@@ -1315,9 +1379,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_audiox.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_vidmuse.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_m2ugen.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_audiox_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_vidmuse_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_m2ugen_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                   </tr>
                 </tbody>
               </table>
@@ -1331,8 +1395,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_video2music.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
-                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_cmt.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_video2music_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
+                    <td><video class="cmp-video" controls="controls"><source src="samples/comparison/V2M/sample1/-k-DUZivB8c_cmt_compressed.mp4" type="video/mp4" />Your browser does not support HTML video.</video></td>
                     <td><div style="height: 140px;"></div></td>
                   </tr>
                 </tbody>
@@ -1464,44 +1528,101 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
       </script>
 
-    <!-- Lazy loading script for comparison samples -->
+    <!-- Eager preloading for all media & hide loader when done -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Add click listeners to all comparison accordions
-        const accordions = document.querySelectorAll('.cmp-sample-accordion');
-        
-        accordions.forEach(function(accordion) {
-          accordion.addEventListener('click', function(e) {
-            // Only process if this is the first time opening
-            if (!accordion.dataset.loaded) {
-              accordion.dataset.loaded = 'true';
-              
-              // Find all audio elements within this accordion and enable them
-              const audioElements = accordion.querySelectorAll('audio');
-              audioElements.forEach(function(audio) {
-                // Remove preload="none" to allow loading
-                audio.removeAttribute('preload');
-                // Trigger load if needed
-                if (audio.readyState === 0) {
-                  audio.load();
-                }
-              });
-              
-              // Find all video elements within this accordion and enable them
-              const videoElements = accordion.querySelectorAll('video');
-              videoElements.forEach(function(video) {
-                // Remove preload="none" to allow loading
-                video.removeAttribute('preload');
-                // Trigger load if needed
-                if (video.readyState === 0) {
-                  video.load();
-                }
-              });
-            }
-          });
+        // Force all media to preload eagerly and track progress
+        const mediaElements = Array.from(document.querySelectorAll('audio, video'));
+        const progressEl = document.getElementById('loading-progress');
+        const progressBar = progressEl ? progressEl.querySelector('.bar') : null;
+        const progressLabel = progressEl ? progressEl.querySelector('.label') : null;
+
+        // Two-level fallback: duration-weighted if available; otherwise count-based
+        const state = {
+          totalCount: mediaElements.length,
+          loadedCount: 0,
+          perIdProgress: new Map(), // id -> 0..1
+          useCountOnly: false
+        };
+
+        // Assign stable ids
+        mediaElements.forEach(function(m, idx) {
+          if (!m.id) m.id = 'media-' + idx;
         });
+
+        function updateProgress() {
+          let pct = 0;
+          if (state.useCountOnly) {
+            pct = state.totalCount === 0 ? 100 : Math.round((state.loadedCount / state.totalCount) * 100);
+          } else {
+            let sum = 0;
+            let n = 0;
+            state.perIdProgress.forEach(function(v){ sum += v; n += 1; });
+            pct = n === 0 ? 0 : Math.round((sum / n) * 100);
+          }
+          if (progressBar) progressBar.style.width = pct + '%';
+          if (progressLabel) progressLabel.textContent = pct + '%';
+          if (progressEl) progressEl.setAttribute('aria-valuenow', String(pct));
+        }
+
+        function markDone(m) {
+          if (!state.perIdProgress.has(m.id) || state.perIdProgress.get(m.id) < 1) {
+            state.perIdProgress.set(m.id, 1);
+            state.loadedCount += 1;
+            updateProgress();
+          }
+        }
+
+        mediaElements.forEach(function(m) {
+          try {
+            m.setAttribute('preload', 'auto');
+            if (m.readyState === 0 && typeof m.load === 'function') m.load();
+
+            // Duration-weighted progress if possible
+            const onProgress = function() {
+              try {
+                const duration = m.duration; // may be NaN until metadata loaded
+                const buffered = m.buffered && m.buffered.length ? m.buffered.end(m.buffered.length - 1) : 0;
+                if (!isNaN(duration) && isFinite(duration) && duration > 0) {
+                  const frac = Math.max(0, Math.min(1, buffered / duration));
+                  state.perIdProgress.set(m.id, frac);
+                  updateProgress();
+                  if (frac >= 0.999) markDone(m);
+                }
+              } catch(e) {}
+            };
+
+            // If metadata available we can compute better
+            m.addEventListener('loadedmetadata', onProgress);
+            m.addEventListener('progress', onProgress);
+            m.addEventListener('canplaythrough', function(){ markDone(m); });
+            m.addEventListener('loadeddata', onProgress);
+            m.addEventListener('error', function(){ markDone(m); });
+
+            // Fallback: if duration never available, switch to count-based
+            setTimeout(function(){
+              if (!state.perIdProgress.has(m.id)) {
+                state.useCountOnly = true;
+              }
+            }, 4000);
+          } catch (e) {
+            markDone(m);
+          }
+        });
+
+        // Initialize progress for empty pages
+        updateProgress();
       });
-      </script>
+
+      // Hide loader only after everything (including media) is fully loaded
+      window.onload = function() {
+        var loadingOverlay = document.getElementById('loading-overlay');
+        if (loadingOverlay) {
+          loadingOverlay.style.opacity = '0';
+          setTimeout(function() { loadingOverlay.style.display = 'none'; }, 500);
+        }
+      };
+    </script>
 
     <!-- Auto-pause other media when playing -->
     <script>
